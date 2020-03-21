@@ -7,7 +7,35 @@
       Sai Ying Pun, Hong Kong
     </title>
     <link rel="stylesheet" type="text/css" href="global.css" />
-    <style></style>
+    <style>
+      .form_required {
+        color: red;
+        margin-right: 8px;
+      }
+      form.contact {
+        padding: 0;
+        margin: 0;
+        margin-top: -15px;
+        line-height: 150%;
+      }
+      form.contact label.fixedwidth {
+        width: 15em;
+        float: left;
+        font-weight: bold;
+      }
+      form.contact .buttonarea input {
+        font-weight: bold;
+        padding: 5px;
+        border: 1px solid white;
+        margin-right: 5px;
+      }
+      form.contact .buttonarea {
+        text-align: center;
+      }
+      .smalltext {
+        font-size: small;
+      }
+    </style>
   </head>
   <body>
     <div id="container">
@@ -45,7 +73,99 @@
         </ul>
       </div>
 
-      <div id="maincontent"></div>
+      <div id="maincontent">
+        <form class="contact" action="" method="post">
+          <p>
+            <label for="name" class="fixedwidth"
+              >Name: <span class="form_required">*</span></label
+            >
+            <input type="text" name="name" id="name" size="40" maxlength="80" />
+          </p>
+
+          <p>
+            <label for="email" class="fixedwidth">Email: </label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              size="40"
+              maxlength="100"
+            />
+          </p>
+
+          <p>
+            <label for="phone" class="fixedwidth">Phone: </label>
+            <input
+              type="text"
+              name="phone"
+              id="phone"
+              size="40"
+              maxlength="20"
+            />
+          </p>
+
+          <p>
+            <label for="subject" class="fixedwidth"
+              >Subject: <span class="form_required">*</span></label
+            >
+            <select name="subject" id="subject">
+              <option selected="selected">General inquiry</option>
+              <option>Restaurant reservation</option>
+              <option>Venue hire</option>
+              <option>Holiday bookings</option>
+            </select>
+          </p>
+
+          <p><label for="”comments”">Comments / Inquiry:</label></p>
+
+          <p>
+            Preferred Contact Method
+            <label class="form_required">*</label>
+            <input
+              type="radio"
+              name="contact-method"
+              id="contact-email"
+              value="email"
+            /><label for="contact-email">Email</label>
+            <input
+              type="radio"
+              name="contact-method"
+              id="contact-phone"
+              value="phone"
+            /><label for="contact-phone">Phone</label>
+          </p>
+          <p>
+            <textarea
+              name="comments"
+              id="comments"
+              cols="60"
+              rows="8"
+            ></textarea>
+          </p>
+          <p class="smalltext">
+            We may occassionally send you information regarding events and
+            promotions at our restaurant. Please confirm if you are happy for us
+            to do this.
+          </p>
+
+          <p class="smalltext">
+            <input
+              type="checkbox"
+              name="accept-communications"
+              id="accept-communications"
+              value="yes"
+            /><label for="accept-communications"
+              >I am happy to hear about events and promotions from Lychee Cafe.
+              Keep me posted !</label
+            >
+          </p>
+
+          <p class="buttonarea">
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Reset" />
+          </p>
+        </form>
+      </div>
     </div>
   </body>
 </html>
