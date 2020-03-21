@@ -117,3 +117,7 @@ body {
   text-decoration: none;
   color: #e7e3b5;
 }
+
+#maincontent {
+  display: block;
+}
