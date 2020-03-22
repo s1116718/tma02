@@ -74,12 +74,19 @@
       </div>
 
       <div id="maincontent">
-        <form class="contact" action="" method="post">
+        <form class="contact" id="contactForm" name="contactForm" method="post">
           <p>
             <label for="name" class="fixedwidth"
               >Name: <span class="form_required">*</span></label
             >
-            <input type="text" name="name" id="name" size="40" maxlength="80" />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              size="40"
+              maxlength="80"
+              required
+            />
           </p>
 
           <p>
@@ -108,7 +115,7 @@
             <label for="subject" class="fixedwidth"
               >Subject: <span class="form_required">*</span></label
             >
-            <select name="subject" id="subject">
+            <select name="subject" id="subject" required>
               <option selected="selected">General inquiry</option>
               <option>Restaurant reservation</option>
               <option>Venue hire</option>
@@ -116,7 +123,7 @@
             </select>
           </p>
 
-          <p><label for="”comments”">Comments / Inquiry:</label></p>
+          <p><label for="comments">Comments / Inquiry:</label></p>
 
           <p>
             Preferred Contact Method
@@ -165,6 +172,25 @@
             <input type="reset" value="Reset" />
           </p>
         </form>
+        <script>
+          const formURL =
+            'https://script.google.com/macros/s/AKfycbxFT4rfHWhXqXB69SCZFHNjc5zOS5OgbneJxwzsQ_XXqvvXuzgb/exec';
+          const form = document.forms['contactForm'];
+          form.addEventListener('submit', e => {
+            e.preventDefault();
+            (async (form, formURL) => {
+              try {
+                const result = await fetch(formURL, {
+                  method: 'POST',
+                  body: new FormData(form),
+                });
+                if (result) location.href = 'thankyou.html';
+              } catch (err) {
+                console.log(err.message);
+              }
+            })(form, formURL);
+          });
+        </script>
       </div>
     </div>
   </body>
