@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000;
+	background-color: #81885B;
+}
+
+#container {
+	padding-top: 10px;
+	padding-bottom: 20px;
+	margin-top: 10px;
+}
+
+h2 {
+	color: #E7E3B5;
+	font-size: 2em;
+}
+
+h4 {
+	color: #E7E3B5;
+}
+
+/* prevent bullet points from displaying on the navigation items */
+
+#mainnav ul {
+	list-style-type: none;
+	background-color: #8B4513;
+	margin: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/* make list items into inline elements so they will display side by side instead of on separate rows */
+#mainnav li {
+	display: inline;
+	padding: 1em;
+}
+
+/* remove the underlines from menu hyperlinks and show them in a specific color */
+#mainnav a {
+	text-decoration: none;
+	color: #E7E3B5;
+	text-align: center;
+}
+
+/* change the color and display the underline on the hyperlink that the user points to or clicks on */
+#mainnav a:hover, #mainnav a:active, #mainnav a:focus {
+	color: #81885B;
+	text-decoration: underline;
+}
+
+footer {
+    background-color: #8B4513;
+    color:#E7E3B5;
+	 clear: both;
+    text-align:center;
+    padding:5px; 
+}
+
+/* style the banner or hero image on the home page*/
+#frontimage {
+	height: 484px;
+	width: 860px;
+	margin-top: 0;
+}

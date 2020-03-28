@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Lychee Café - Organic, Locally-Sourced and Sustainable Restaurant in Sai
+      Yin Pun, Hong Kong
+    </title>
+
+    <link
+      rel="shortcut icon"
+      href="http://lab.ouhk.edu.hk/its234/examples/u4/act4-9/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Roboto:400,700,500italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="css/grid.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/lightbox.min.css" />
+    <!-- lightbox2 plus jquery -->
+    <script src="js/jquery.js"></script>
+    <script src="js/lightbox.js"></script>
+    <style>
+      /* Define the style for .grid_3 class from the 960grid system*/
+      .grid_3 {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+      }
+
+      /* Define the style for the image thumbnail */
+      .img-gallery {
+        border: 1px solid white;
+        margin-bottom: 10px;
+        -moz-border-radius: 1px;
+        -webkit-border-radius: 1px;
+        -o-border-radius: 1px;
+        -ms-border-radius: 1px;
+        border-radius: 1px;
+        -moz-box-shadow: 1px 1px 3px gray;
+        -webkit-box-shadow: 1px 1px 3px gray;
+        -o-box-shadow: 1px 1px 3px gray;
+        -ms-box-shadow: 1px 1px 3px gray;
+        box-shadow: 1px 1px 3px gray;
+      }
+
+      /* Define the style for the image caption*/
+
+      .img-caption {
+        font-size: 65%;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container" class="container_12">
+      <header class="grid_12">
+        <img
+          id="logo"
+          src="img/lrg-logo-bg.jpg"
+          alt="Lychee Cafe Large Logo"
+          width="43.131313%"
+        />
+      </header>
+      <!-- end of header div -->
+
+      <nav id="mainnav" class="grid_11">
+        <ul id="navlist">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menus</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div id="maincontent" class="grid_11">
+        <!-- This element takes up 3 columns plus one extra column as its prefix -->
+        <section class="grid_3 prefix_1">
+          <a href="img/white-wall-860.jpg" data-lightbox="white-wall-860"
+            ><img
+              src="img/white-wall-200.jpg"
+              class="img-gallery"
+              alt="Dining Area with White Wall"
+          /></a>
+          <div class="img-caption">Private dining area</div>
+        </section>
+
+        <!-- This element takes up 3 columns -->
+        <section class="grid_3">
+          <a href="img/glass-front-860.jpg" data-lightbox="glass-front-860"
+            ><img
+              src="img/glass-front-200.jpg"
+              class="img-gallery"
+              alt="Front Dining Area with Glass Wall"
+          /></a>
+          <div class="img-caption">Front dining area</div>
+        </section>
+
+        <!-- This element takes up 3 columns -->
+        <section class="grid_3">
+          <a href="img/crab-cakes-860.jpg" data-lightbox="crab-cakes-860"
+            ><img
+              src="img/crab-cakes-200.jpg"
+              class="img-gallery"
+              alt="Crab cakes with seaweed salad"
+          /></a>
+          <div class="img-caption">Crab cakes</div>
+        </section>
+
+        <section class="clear"></section>
+
+        <!-- This element takes up 3 columns plus one extra column as its prefix -->
+        <section class="grid_3 prefix_1">
+          <a href="img/shepherds-pie-860.jpg" data-lightbox="shepherds-pie-860">
+            <img
+              src="img/shepherds-pie-200.jpg"
+              class="img-gallery"
+              alt="Shepherds pie with minced lamb"
+          /></a>
+          <div class="img-caption">Creamy shepherds pie</div>
+        </section>
+
+        <!-- This element takes up 3 columns -->
+        <section class="grid_3">
+          <!-- add another photo with caption here -->
+        </section>
+
+        <!-- This element takes up 3 columns -->
+        <section class="grid_3">
+          <!-- add another photo with caption here -->
+        </section>
+
+        <section class="clear"></section>
+
+        <!-- end of maincontent div -->
+      </div>
+
+      <!-- end of container div -->
+
+      <footer class="grid_11">
+        &copy; 2010
+        <script>
+          new Date().getFullYear() > 2010 &&
+            document.write(' - ' + new Date().getFullYear());
+        </script>
+        , Lychee Cafe, All Rights Reserved.
+      </footer>
+    </div>
+
+    <script>
+      $(document).ready(() => {
+        console.log('ready');
+        console.log('$', lightbox);
+      });
+    </script>
+    <!-- load jQuery and the plugin here-->
+  </body>
+</html>
