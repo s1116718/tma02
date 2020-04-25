@@ -123,14 +123,13 @@
               <option>Holiday bookings</option>
             </select>
           </p>
-
-          <p><label for="comments">Comments / Inquiry:</label></p>
           <p>
             <fieldset style="display: inline-block; border-width: 0;">
               <legend style="display: inline-block;">
                 Preferred Contact Method
+                <label for="contact-method" class="form_required">*</label>
               </legend>
-              <label for="contact-method" class="form_required">*</label>
+              
               <input
                 type="radio"
                 name="contact-method"
@@ -145,6 +144,8 @@
               /><label for="contact-method">Phone</label>
             </fieldset>
           </p>
+          <p><label for="comments">Comments / Inquiry:</label></p>
+
           <p>
             <textarea
               name="comments"
