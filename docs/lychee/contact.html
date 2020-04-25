@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="global.css" />
     <style>
       .form_required {
+        background-color: white;
         color: red;
         margin-right: 8px;
       }
@@ -39,15 +40,15 @@
   </head>
   <body>
     <div id="container">
-      <div id="header">
-        <p>
+      <div id="header" role="banner">
+        <h1>
           <img
             src="lrg-logo-bg.jpg"
             width="427"
             height="138"
             alt="Lychee Cafe Large Logo"
           />
-        </p>
+        </h1>
       </div>
       <!-- end of header div -->
       <div id="mainnav">
@@ -73,7 +74,7 @@
         </ul>
       </div>
 
-      <div id="maincontent">
+      <div id="maincontent" role="region">
         <form class="contact" id="contactForm" name="contactForm" method="post">
           <p>
             <label for="name" class="fixedwidth"
@@ -125,21 +126,23 @@
 
           <p><label for="comments">Comments / Inquiry:</label></p>
 
-          <p>
+          <p style="display:inline-block">
             Preferred Contact Method
-            <label class="form_required">*</label>
+            <label for="contact-method" class="form_required">*</label>
+            <fieldset style="display:inline-block; border-width: 0;">
             <input
               type="radio"
               name="contact-method"
               id="contact-email"
               value="email"
-            /><label for="contact-email">Email</label>
+            /><label for="contact-method">Email</label>
             <input
               type="radio"
               name="contact-method"
               id="contact-phone"
               value="phone"
-            /><label for="contact-phone">Phone</label>
+            /><label for="contact-method">Phone</label>
+            </fieldset>
           </p>
           <p>
             <textarea
@@ -167,7 +170,7 @@
             >
           </p>
 
-          <p class="buttonarea">
+          <p class="buttonarea" role="button">
             <input type="submit" value="Submit" />
             <input type="reset" value="Reset" />
           </p>
@@ -176,7 +179,7 @@
           const formURL =
             'https://script.google.com/macros/s/AKfycbxFT4rfHWhXqXB69SCZFHNjc5zOS5OgbneJxwzsQ_XXqvvXuzgb/exec';
           const form = document.forms['contactForm'];
-          form.addEventListener('submit', e => {
+          form.addEventListener('submit', (e) => {
             e.preventDefault();
             (async (form, formURL) => {
               try {
