@@ -9,8 +9,8 @@
     <link rel="stylesheet" type="text/css" href="global.css" />
     <style>
       .form_required {
-        background-color: white;
-        color: red;
+        background-color: #00ffff;
+        color: #ff0000;
         margin-right: 8px;
       }
       form.contact {
@@ -125,23 +125,24 @@
           </p>
 
           <p><label for="comments">Comments / Inquiry:</label></p>
-
-          <p style="display:inline-block">
-            Preferred Contact Method
-            <label for="contact-method" class="form_required">*</label>
-            <fieldset style="display:inline-block; border-width: 0;">
-            <input
-              type="radio"
-              name="contact-method"
-              id="contact-email"
-              value="email"
-            /><label for="contact-method">Email</label>
-            <input
-              type="radio"
-              name="contact-method"
-              id="contact-phone"
-              value="phone"
-            /><label for="contact-method">Phone</label>
+          <p>
+            <fieldset style="display: inline-block; border-width: 0;">
+              <legend style="display: inline-block;">
+                Preferred Contact Method
+              </legend>
+              <label for="contact-method" class="form_required">*</label>
+              <input
+                type="radio"
+                name="contact-method"
+                id="contact-email"
+                value="email"
+              /><label for="contact-method">Email</label>
+              <input
+                type="radio"
+                name="contact-method"
+                id="contact-phone"
+                value="phone"
+              /><label for="contact-method">Phone</label>
             </fieldset>
           </p>
           <p>
